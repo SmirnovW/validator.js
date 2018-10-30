@@ -21,6 +21,7 @@
     "sanitise",
     "assert"
   ],
+  "sideEffects": false,
   "author": "Chris O'Hara <cohara87@gmail.com>",
   "contributors": [
     {
