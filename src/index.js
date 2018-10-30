@@ -15,8 +15,10 @@ export { default as isFQDN } from './lib/isFQDN';
 
 export { default as isBoolean } from './lib/isBoolean';
 
-import isAlpha, { locales as isAlphaLocales } from './lib/isAlpha';
-import isAlphanumeric, { locales as isAlphanumericLocales } from './lib/isAlphanumeric';
+export { default as isAlpha } from './lib/isAlpha';
+export { locales as isAlphaLocales } from './lib/isAlpha';
+export { default as isAlphanumeric } from './lib/isAlphanumeric';
+export { locales as isAlphanumericLocales } from './lib/isAlphanumeric';
 export { default as isNumeric } from './lib/isNumeric';
 export { default as isPort } from './lib/isPort';
 export { default as isLowercase } from './lib/isLowercase';
@@ -99,88 +101,4 @@ export { default as normalizeEmail } from './lib/normalizeEmail';
 
 export { default as toString } from './lib/util/toString';
 
-const version = '10.8.0';
-
-const validator = {
-  version,
-  toDate,
-  toFloat,
-  toInt,
-  toBoolean,
-  equals,
-  contains,
-  matches,
-  isEmail,
-  isURL,
-  isMACAddress,
-  isIP,
-  isIPRange,
-  isFQDN,
-  isBoolean,
-  isAlpha,
-  isAlphaLocales,
-  isAlphanumeric,
-  isAlphanumericLocales,
-  isNumeric,
-  isPort,
-  isLowercase,
-  isUppercase,
-  isAscii,
-  isFullWidth,
-  isHalfWidth,
-  isVariableWidth,
-  isMultibyte,
-  isSurrogatePair,
-  isInt,
-  isFloat,
-  isFloatLocales,
-  isDecimal,
-  isHexadecimal,
-  isDivisibleBy,
-  isHexColor,
-  isISRC,
-  isMD5,
-  isHash,
-  isJWT,
-  isJSON,
-  isEmpty,
-  isLength,
-  isByteLength,
-  isUUID,
-  isMongoId,
-  isAfter,
-  isBefore,
-  isIn,
-  isCreditCard,
-  isIdentityCard,
-  isISIN,
-  isISBN,
-  isISSN,
-  isMobilePhone,
-  isMobilePhoneLocales,
-  isPostalCode,
-  isPostalCodeLocales,
-  isCurrency,
-  isISO8601,
-  isRFC3339,
-  isISO31661Alpha2,
-  isISO31661Alpha3,
-  isBase64,
-  isDataURI,
-  isMagnetURI,
-  isMimeType,
-  isLatLong,
-  ltrim,
-  rtrim,
-  trim,
-  escape,
-  unescape,
-  stripLow,
-  whitelist,
-  blacklist,
-  isWhitelisted,
-  normalizeEmail,
-  toString,
-};
-
-export default validator;
+export const version = '10.8.0';
