@@ -21,10 +21,10 @@
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 (function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-	typeof define === 'function' && define.amd ? define(factory) :
-	(global.validator = factory());
-}(this, (function () { 'use strict';
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
+	typeof define === 'function' && define.amd ? define(['exports'], factory) :
+	(factory((global.validator = global.validator || {})));
+}(this, (function (exports) { 'use strict';
 
 function _typeof(obj) {
   if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
@@ -1986,88 +1986,87 @@ function normalizeEmail(email, options) {
 }
 
 var version = '10.8.0';
-var validator = {
-  version: version,
-  toDate: toDate,
-  toFloat: toFloat,
-  toInt: toInt,
-  toBoolean: toBoolean,
-  equals: equals,
-  contains: contains,
-  matches: matches,
-  isEmail: isEmail,
-  isURL: isURL,
-  isMACAddress: isMACAddress,
-  isIP: isIP,
-  isIPRange: isIPRange,
-  isFQDN: isFQDN,
-  isBoolean: isBoolean,
-  isAlpha: isAlpha,
-  isAlphaLocales: locales,
-  isAlphanumeric: isAlphanumeric,
-  isAlphanumericLocales: locales$1,
-  isNumeric: isNumeric,
-  isPort: isPort,
-  isLowercase: isLowercase,
-  isUppercase: isUppercase,
-  isAscii: isAscii,
-  isFullWidth: isFullWidth,
-  isHalfWidth: isHalfWidth,
-  isVariableWidth: isVariableWidth,
-  isMultibyte: isMultibyte,
-  isSurrogatePair: isSurrogatePair,
-  isInt: isInt,
-  isFloat: isFloat,
-  isFloatLocales: locales$2,
-  isDecimal: isDecimal,
-  isHexadecimal: isHexadecimal,
-  isDivisibleBy: isDivisibleBy,
-  isHexColor: isHexColor,
-  isISRC: isISRC,
-  isMD5: isMD5,
-  isHash: isHash,
-  isJWT: isJWT,
-  isJSON: isJSON,
-  isEmpty: isEmpty,
-  isLength: isLength,
-  isByteLength: isByteLength,
-  isUUID: isUUID,
-  isMongoId: isMongoId,
-  isAfter: isAfter,
-  isBefore: isBefore,
-  isIn: isIn,
-  isCreditCard: isCreditCard,
-  isIdentityCard: isIdentityCard,
-  isISIN: isISIN,
-  isISBN: isISBN,
-  isISSN: isISSN,
-  isMobilePhone: isMobilePhone,
-  isMobilePhoneLocales: locales$3,
-  isPostalCode: isPostalCode,
-  isPostalCodeLocales: locales$4,
-  isCurrency: isCurrency,
-  isISO8601: isISO8601,
-  isRFC3339: isRFC3339,
-  isISO31661Alpha2: isISO31661Alpha2,
-  isISO31661Alpha3: isISO31661Alpha3,
-  isBase64: isBase64,
-  isDataURI: isDataURI,
-  isMagnetURI: isMagnetURI,
-  isMimeType: isMimeType,
-  isLatLong: isLatLong,
-  ltrim: ltrim,
-  rtrim: rtrim,
-  trim: trim,
-  escape: escape,
-  unescape: unescape,
-  stripLow: stripLow,
-  whitelist: whitelist,
-  blacklist: blacklist$1,
-  isWhitelisted: isWhitelisted,
-  normalizeEmail: normalizeEmail,
-  toString: toString
-};
 
-return validator;
+exports.version = version;
+exports.toDate = toDate;
+exports.toFloat = toFloat;
+exports.toInt = toInt;
+exports.toBoolean = toBoolean;
+exports.equals = equals;
+exports.contains = contains;
+exports.matches = matches;
+exports.isEmail = isEmail;
+exports.isURL = isURL;
+exports.isMACAddress = isMACAddress;
+exports.isIP = isIP;
+exports.isIPRange = isIPRange;
+exports.isFQDN = isFQDN;
+exports.isBoolean = isBoolean;
+exports.isAlpha = isAlpha;
+exports.isAlphaLocales = locales;
+exports.isAlphanumeric = isAlphanumeric;
+exports.isAlphanumericLocales = locales$1;
+exports.isNumeric = isNumeric;
+exports.isPort = isPort;
+exports.isLowercase = isLowercase;
+exports.isUppercase = isUppercase;
+exports.isAscii = isAscii;
+exports.isFullWidth = isFullWidth;
+exports.isHalfWidth = isHalfWidth;
+exports.isVariableWidth = isVariableWidth;
+exports.isMultibyte = isMultibyte;
+exports.isSurrogatePair = isSurrogatePair;
+exports.isInt = isInt;
+exports.isFloat = isFloat;
+exports.isFloatLocales = locales$2;
+exports.isDecimal = isDecimal;
+exports.isHexadecimal = isHexadecimal;
+exports.isDivisibleBy = isDivisibleBy;
+exports.isHexColor = isHexColor;
+exports.isISRC = isISRC;
+exports.isMD5 = isMD5;
+exports.isHash = isHash;
+exports.isJWT = isJWT;
+exports.isJSON = isJSON;
+exports.isEmpty = isEmpty;
+exports.isLength = isLength;
+exports.isByteLength = isByteLength;
+exports.isUUID = isUUID;
+exports.isMongoId = isMongoId;
+exports.isAfter = isAfter;
+exports.isBefore = isBefore;
+exports.isIn = isIn;
+exports.isCreditCard = isCreditCard;
+exports.isIdentityCard = isIdentityCard;
+exports.isISIN = isISIN;
+exports.isISBN = isISBN;
+exports.isISSN = isISSN;
+exports.isMobilePhone = isMobilePhone;
+exports.isMobilePhoneLocales = locales$3;
+exports.isCurrency = isCurrency;
+exports.isISO8601 = isISO8601;
+exports.isRFC3339 = isRFC3339;
+exports.isISO31661Alpha2 = isISO31661Alpha2;
+exports.isISO31661Alpha3 = isISO31661Alpha3;
+exports.isBase64 = isBase64;
+exports.isDataURI = isDataURI;
+exports.isMagnetURI = isMagnetURI;
+exports.isMimeType = isMimeType;
+exports.isLatLong = isLatLong;
+exports.isPostalCode = isPostalCode;
+exports.isPostalCodeLocales = locales$4;
+exports.ltrim = ltrim;
+exports.rtrim = rtrim;
+exports.trim = trim;
+exports.escape = escape;
+exports.unescape = unescape;
+exports.stripLow = stripLow;
+exports.whitelist = whitelist;
+exports.blacklist = blacklist$1;
+exports.isWhitelisted = isWhitelisted;
+exports.normalizeEmail = normalizeEmail;
+exports.toString = toString;
+
+Object.defineProperty(exports, '__esModule', { value: true });
 
 })));

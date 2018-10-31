@@ -2,7 +2,7 @@ import { format } from 'util';
 import assert from 'assert';
 import fs from 'fs';
 import vm from 'vm';
-import validator from '../index';
+import * as validator from '../index';
 
 let validator_js = fs.readFileSync(require.resolve('../validator.js')).toString();
 
@@ -3321,8 +3321,8 @@ describe('Validators', () => {
   it('should define the module using an AMD-compatible loader', () => {
     let window = {
       validator: null,
-      define(module) {
-        window.validator = module();
+      define(exports, module) {
+        module((window.validator = window.validator || {}));
       },
     };
     window.define.amd = true;

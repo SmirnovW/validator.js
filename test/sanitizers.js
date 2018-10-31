@@ -1,5 +1,5 @@
 import { format } from 'util';
-import validator from '../index';
+import * as validator from '../index';
 
 function test(options) {
   let args = options.args || [];

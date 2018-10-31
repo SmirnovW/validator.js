@@ -1,6 +1,6 @@
 import assert from 'assert';
-import validator from '../validator';
-import min from '../validator.min';
+import * as validator from '../validator';
+import * as min from '../validator.min';
 
 describe('Minified version', () => {
   it('should export the same things as the server-side version', () => {

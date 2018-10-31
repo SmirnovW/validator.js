@@ -32,7 +32,7 @@ export { default as isMultibyte } from './lib/isMultibyte';
 export { default as isSurrogatePair } from './lib/isSurrogatePair';
 
 export { default as isInt } from './lib/isInt';
-export { default as isFloat} from './lib/isFloat';
+export { default as isFloat } from './lib/isFloat';
 export { locales as isFloatLocales } from './lib/isFloat';
 export { default as isDecimal } from './lib/isDecimal';
 export { default as isHexadecimal } from './lib/isHexadecimal';
@@ -67,7 +67,7 @@ export { default as isISIN } from './lib/isISIN';
 export { default as isISBN } from './lib/isISBN';
 export { default as isISSN } from './lib/isISSN';
 
-export { default as isMobilePhone} from './lib/isMobilePhone';
+export { default as isMobilePhone } from './lib/isMobilePhone';
 export { locales as isMobilePhoneLocales } from './lib/isMobilePhone';
 
 export { default as isCurrency } from './lib/isCurrency';
@@ -84,7 +84,7 @@ export { default as isMagnetURI } from './lib/isMagnetURI';
 export { default as isMimeType } from './lib/isMimeType';
 
 export { default as isLatLong } from './lib/isLatLong';
-export { default as isPostalCode} from './lib/isPostalCode';
+export { default as isPostalCode } from './lib/isPostalCode';
 export { locales as isPostalCodeLocales } from './lib/isPostalCode';
 
 export { default as ltrim } from './lib/ltrim';
